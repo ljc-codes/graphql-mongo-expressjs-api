@@ -1,30 +1,27 @@
 # 🦩 graphql-mongo-expressjs-api
 ## Overview
+### version: BETA
 
-This is a very simple mongoDB express graphql backend.
 
-It features jsonwebtoken auth and nodemon. 
-It uses mongoose to connect to mongo db and vanilla graphql 
-data loaders for nested querying. 
+## What is it?
 
-The code includes some simple data models to get started. 
+**graphql-mongo-expressjs-api** is example code for standing up a graphql endpoint on an express server with nodemon. The graphql app leverages mongoose to build data models and connects to a mongo atlas cluster. Middleware in the form of jsonwebtoken is provided for authentication. The starter models included in the code demonstrate basic usages for building web apps. 
 
-TODO: Cleanup Models + Buildsteps + Devops
+## Configuration 
 
-## :: app ::
-### client   [vue]
-### graphql    [graphql]
-### middleware [jsonwebtokenauth]
-### models     [mongodb]
+In the **nodemon.json** file we find the following configuration for the server. 
 
-Steps: 
+    {
+        "env": {
+            "MONGO_URI": "mongodb+srv://[YOUR MONGOATLAS CLUSTER URI]",
+            "GQL_ENDPOINT": "/graphql",
+            "PORT": 4000
+        }
+    }
 
-1) Install all dependencies
-```sh
-(npm/yarn) install 
-```
-2) Run the server
-```sh
-(npm/yarn) start
-```
+## Build Steps 
 
+    npm install
+    npm start 
+    
+    
